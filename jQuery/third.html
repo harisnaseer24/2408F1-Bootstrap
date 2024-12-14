@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+   
+        .blue{
+/* background-color: rgba(52, 84, 246, 0.807); */
+/* color: rgb(255, 255, 255); */
+border: 2px solid rgb(232, 248, 0);
+padding: 10px;
+font-size: 28px;
+        }
+
+        .yellow{
+/* background-color: rgba(0, 0, 0, 0.807); */
+color: rgb(247, 230, 0);
+border: 2px solid cyan;
+padding: 10px;
+font-size: 28px;
+        } 
+        .red{
+/* background-color: rgba(255, 0, 0, 0.807); */
+/* color: rgb(255, 255, 255); */
+border: 2px solid cyan;
+padding: 10px;
+font-size: 28px;
+        }
+        /* .yellow :nth-child(odd){
+            color: black;
+            background-color: blanchedalmond;
+        }
+         */
+         input:focus{
+            border:1px solid cyan;
+         }
+        
+    </style>
+</head>
+<body>
+    <div class="red">
+        <h1>2302c2 <span>(5-7 TTS)</span></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor beatae corrupti sit obcaecati <span>light</span> facere neque vitae atque harum, reiciendis veniam facilis eaque recusandae quae corporis eum fuga delectus nesciunt.</p>
+        <input type="text" id="myinput" value="abc">
+   
+    </div>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+$(document).ready(function(){
+
+$(".red").before("<h2>hello jarvis</h2>");
+$(".red").after("<h2>hello jarvis</h2>");
+
+$(".red").prepend("<h2>hello jarvis</h2>");
+$(".red").append("<h2>hello jarvis</h2>");
+
+$(".red").addClass("blue yellow")
+$(".red").removeClass("red yellow");
+
+
+$(".blue").hover(()=>{
+    $(".blue").toggleClass("red yellow")
+})
+
+
+$("#myinput").keyup(()=>{
+    // $(".blue").toggleClass("red yellow")
+    var input=$("#myinput");
+let email= input.val();
+if (email=="") {
+    input.css({
+        border:"1px solid red",
+        backgroundColor:"red"
+
+    })
+} else {
+    input.css(
+        {
+        border:"1px solid green",
+        backgroundColor:"green"
+
+    })
+    
+}
+})
+
+$("span").parent().html("2408F1 <span>(5-7 TTS)</span>")
+// $("span").parent().css({color: "purple"})
+// // $("span").parents().css({border: "2px solid purple"})
+
+// $(".blue").children(":first-child").css({border: "2px solid purple"})
+// $(".blue").children(":last-child").css({border: "2px solid purple"})
+
+$(".blue").children(":nth-child(even)").css({border: "2px solid purple"})
+
+
+
+
+})
+    </script>
+</body>
+</html>
+
+<!-- 
+var age=45;//global-scoped variables
+
+let name="haris"//local-scoped variables
+
+
+if(9===9){
+   var number=7;
+
+   var number2=9; 
+}
+console.log(number2+number);
+
+const batchCode="2408f1";
+// batchCode="2342";
+
+ -->
